@@ -11,6 +11,7 @@ import enum FloatingButton.Alignment
 
 enum MessageMenuAction {
     case reply
+    case copy
 }
 
 struct MessageMenu<MainButton: View>: View {
@@ -27,7 +28,7 @@ struct MessageMenu<MainButton: View>: View {
 
     var body: some View {
         FloatingButton(mainButtonView: mainButton().allowsHitTesting(false), buttons: [
-            menuButton(title: "Reply", icon: theme.images.messageMenu.reply, action: .reply)
+            menuButton(title: "Copy", icon: theme.images.messageMenu.copy, action: .copy)
         ], isOpen: $isShowingMenu)
         .straight()
         .initialOpacity(0)

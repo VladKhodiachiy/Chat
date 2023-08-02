@@ -275,6 +275,8 @@ public struct ChatView<MessageContent: View, InputViewContent: View>: View {
         case .reply:
             inputViewModel.attachments.replyMessage = row.message.toReplyMessage()
             globalFocusState.focus = .uuid(inputFieldId)
+        case .copy:
+            UIPasteboard.general.string = row.message.text
         }
     }
 }

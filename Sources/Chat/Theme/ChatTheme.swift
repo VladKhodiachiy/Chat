@@ -147,6 +147,7 @@ public struct ChatTheme {
             public var retry: Image
             public var save: Image
             public var select: Image
+            public var copy: Image
         }
 
         public struct RecordAudio {
@@ -210,6 +211,7 @@ public struct ChatTheme {
             edit: Image? = nil,
             forward: Image? = nil,
             reply: Image? = nil,
+            copy: Image? = nil,
             retry: Image? = nil,
             save: Image? = nil,
             select: Image? = nil,
@@ -279,7 +281,8 @@ public struct ChatTheme {
                 reply: reply ?? Image("reply", bundle: .current),
                 retry: retry ?? Image("retry", bundle: .current),
                 save: save ?? Image("save", bundle: .current),
-                select: select ?? Image("select", bundle: .current)
+                select: select ?? Image("select", bundle: .current),
+                copy: copy ?? Image(systemName: "doc.on.doc")
             )
 
             self.recordAudio = RecordAudio(
